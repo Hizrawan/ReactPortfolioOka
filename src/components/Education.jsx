@@ -2,7 +2,7 @@ import React from 'react'
 import Binus from "../assets/images/logobinus.png"
 import Polban from "../assets/images/logopolban.png"
 import NCUT from "../assets/images/logoncut.png"
-
+import { Link } from 'react-scroll';
 const Education = () => {
     return (
 
@@ -35,6 +35,11 @@ const Education = () => {
                     </div>
                 </a>
             </div>
+            <div className="scroll-button">
+        <Link to="experience" spy={true} smooth={true} offset={-15} duration={500}>
+          <button>Scroll to Next Section</button>
+        </Link>
+      </div>
         </div>
 
     )

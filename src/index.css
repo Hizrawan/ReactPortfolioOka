@@ -12,11 +12,10 @@ h1 {
     background-color: #4E567E;
     display: flex;
     justify-content: center;
-    margin: 0 !important;
+    margin-top: -2rem !important;
     align-items: center;
 }
-
-
+/* Card.css */
 .card {
     display: flex;
     align-items: center;
@@ -25,11 +24,30 @@ h1 {
     border-radius: 8px; /* Rounded corners */
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Subtle shadow */
     transition: transform 0.3s ease;
-}
-
-    .card:hover {
-        transform: scale(1.1);
-    }
+    position: relative; /* Needed for tooltip positioning */
+    cursor: pointer; /* Indicate clickable element */
+  }
+  
+  .card:hover {
+    transform: scale(1.1);
+  }
+  
+  .tooltip {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    opacity: 1;
+    transition: opacity 0.3s;
+  }
+  
+  .card:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+  }
 
 .card-content {
     display: flex;
@@ -66,7 +84,7 @@ h1 {
     background-color: #5E7E7E;
     display: flex;
     flex-direction: column; /* Stack elements vertically */
-    justify-content: flex-start; /* Align items to the top */
+    justify-content: center; /* Align items to the top */
     align-items: center;
 }
 
@@ -85,6 +103,7 @@ h1 {
     align-items: stretch;
     margin: 1rem;
     gap: 1rem;
+    
 }
 
     .card-edu > a:nth-child(1) .edu-section {
@@ -114,6 +133,7 @@ h1 {
     border-radius: 8px; /* Rounded corners */
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Subtle shadow */
     min-width: calc(33.333% - 1rem);
+    min-height: 35vh;
     transition: transform 0.3s ease;
 }
 
@@ -134,6 +154,36 @@ h1 {
     justify-content: center;
     align-items: center;
 }
+.skills-section {
+    padding: 2rem;
+    background-color: #f7f7f7; /* Lighter background for contrast */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    max-width: 1200px; /* Maximum width with centering */
+}
+
+    .skills-section h2 {
+        margin-bottom: 1rem; /* Spacing below the heading */
+        text-align: center;
+    }
+
+    .skills-section ul {
+        list-style-type: none; /* Remove default list styling */
+        padding: 0; /* Remove default padding */
+    }
+
+    .skills-section li {
+        background-color: #e9e7e2; /* Light grey background for each skill */
+        padding: 0.5rem 1rem; /* Padding inside each skill */
+        margin-bottom: 0.5rem; /* Spacing between skills */
+        border-radius: 4px; /* Rounded corners for skill items */
+        transition: transform 0.3s ease;
+    }
+
+        .skills-section li:hover {
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+            transform: scale(1.1);
+        }
 
 .mainwork {
     min-height: 100vh;
@@ -180,6 +230,11 @@ img.social-icon {
     justify-content: center;
     align-items: center;
 }
+.mainproject h1{
+   font-weight: 100;
+   font-size: 4rem;
+   margin-right: 15px;
+}
 
 .mainblog {
     min-height: 100vh;
@@ -189,6 +244,11 @@ img.social-icon {
     justify-content: center;
     align-items: center;
 }
+.mainblog h1{
+    font-weight: 100;
+    font-size: 4rem;
+    margin-right: 15px;
+ }
 
 .card-project {
     flex: 1;
@@ -196,7 +256,7 @@ img.social-icon {
     border: 1px solid #ccc;
     padding: 1rem;
     width: 30vw;
-    height: 20vh;
+    height: 30vh;
     margin: 5px;
     text-align: center;
     background-color: #D9D9D6;
@@ -235,7 +295,7 @@ img.social-icon {
         border-radius: 8px; /* Rounded corners */
         box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Subtle shadow */
         grid-template-columns: repeat(3, 1fr);
-        margin-right: 15px;
+        margin-right: 20px;
     }
 
     .card-blog {
@@ -243,7 +303,7 @@ img.social-icon {
         min-width: calc(33.333% - 1rem); /* Adjust the width as needed */
         border: 1px solid #ccc;
         padding: 1rem;
-        width: 30vw;
+        width: 20vw;
         height: 20vh;
         margin: 5px;
         text-align: center;
@@ -314,4 +374,63 @@ img.social-icon {
             box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
             transform: scale(1.1);
         }
-
+/* Navbar.css */
+nav {
+    background-color: #333;
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .navbar-menu {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar-menu li {
+    margin: 0 1rem;
+  }
+  
+  .navbar-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+  }
+  
+  .navbar-menu a:hover {
+    color: #ff6347; /* Tomato color */
+  }
+  
+  .active {
+    border-bottom: 2px solid #ff6347;
+  }
+  
+  body {
+    padding-top: 70px; /* Adjust this value based on the height of your navbar */
+  }
+  
+  .scroll-button {
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  .scroll-button button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .scroll-button button:hover {
+    background-color: #0056b3;
+  }

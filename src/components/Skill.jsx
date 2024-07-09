@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { Link } from 'react-scroll';
 const Skill = () => {
     return (
         <div className="mainskills">
@@ -14,7 +14,11 @@ const Skill = () => {
 
                 </ul>
             </div>
-
+            <div className="scroll-button">
+        <Link to="education" spy={true} smooth={true} offset={-15} duration={500}>
+          <button>Scroll to Next Section</button>
+        </Link>
+      </div>
         </div>
     )
 }

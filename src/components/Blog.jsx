@@ -1,39 +1,30 @@
-import React from 'react'
-
+import React, { useEffect, useState } from 'react';
+import { Link } from 'react-scroll';
 const Blog = () => {
+    const [posts, setPosts] = useState([]);
+
+    useEffect(() => {
+        fetch('https://dev.to/api/articles?username=hizrawandwioka')
+          .then(response => response.json())
+          .then(data => {
+            const latestPosts = data.slice(0, 5); // Get the latest 6 posts
+            setPosts(latestPosts);
+          })
+          .catch(error => console.error('Error fetching data:', error));
+      }, []);
+
   return (
     <div className="mainblog">
      <div className="blog-section">
-        <a href="@UserPosts[i].Url" target="_blank" className="post-card-link">
+        {posts.map((post, index) => (
+          <a key={index} href={post.url} target="_blank" className="post-card-link" rel="noopener noreferrer">
             <div className="card-blog">
-                <strong> @UserPosts[i].Title</strong>
-                <p>@UserPosts[i].Description</p>
+              <strong>{post.title}</strong>
+              <p>{post.description}</p>
             </div>
-        </a>
-        <a href="@UserPosts[i].Url" target="_blank" className="post-card-link">
-            <div className="card-blog">
-                <strong> @UserPosts[i].Title</strong>
-                <p>@UserPosts[i].Description</p>
-            </div>
-        </a>
-        <a href="@UserPosts[i].Url" target="_blank" className="post-card-link">
-            <div className="card-blog">
-                <strong> @UserPosts[i].Title</strong>
-                <p>@UserPosts[i].Description</p>
-            </div>
-        </a>
-        <a href="@UserPosts[i].Url" target="_blank" className="post-card-link">
-            <div className="card-blog">
-                <strong> @UserPosts[i].Title</strong>
-                <p>@UserPosts[i].Description</p>
-            </div>
-        </a>
-        <a href="@UserPosts[i].Url" target="_blank" className="post-card-link">
-            <div className="card-blog">
-                <strong> @UserPosts[i].Title</strong>
-                <p>@UserPosts[i].Description</p>
-            </div>
-        </a>
+          </a>
+        ))}
+       
     
     <a href="https://dev.to/hizrawandwioka" className="post-card-link">
         <div className="card-blog">
@@ -43,7 +34,12 @@ const Blog = () => {
     </a>
 </div>
 
-     <h1>Blogs</h1>
+     <h1 className='title-edu'>Blogs</h1>
+     <div className="scroll-button">
+        <Link to="contact" spy={true} smooth={true} offset={-15} duration={500}>
+          <button>Scroll to Next Section</button>
+        </Link>
+      </div>
  </div>
   )
 }

@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { Link } from 'react-scroll';
 const Experience = () => {
     return (
         <div className="mainwork">
@@ -68,11 +68,13 @@ const Experience = () => {
                             </li>
                         </ul>
                     </div>
-
-
-
                 </div>
             </div>
+            <div className="scroll-button">
+        <Link to="project" spy={true} smooth={true} offset={-15} duration={500}>
+          <button>Scroll to Next Section</button>
+        </Link>
+      </div>
         </div>
 
     )
