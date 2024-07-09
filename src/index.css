@@ -1,0 +1,173 @@
+/* App.css */
+h1 {
+    font-weight: 200;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 7rem;
+    margin: 0;
+}
+
+
+.App {
+    min-height: 100vh;
+    min-width: 100vw;
+    background-color: #4E567E;
+    display: flex;
+    justify-content: center;
+    margin: 0 !important;
+    align-items: center;
+}
+
+
+.card {
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+    background-color: #d4cfb1;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    transition: transform 0.3s ease;
+}
+
+    .card:hover {
+        transform: scale(1.1);
+    }
+
+.card-content {
+    display: flex;
+    justify-content: space-between;
+    width: 75vw;
+    height: 35vh;
+}
+
+.name, .description {
+    display: flex;
+    align-items: center;
+}
+
+.name {
+    flex-basis: 50% !important; /* Takes up 40% of the flex container */
+    font-size: 3rem !important;
+    color: #4E567E !important; /* Dark blue color */
+    margin: 0 !important;
+    font-weight: 100;
+}
+
+.description {
+    text-align: center;
+    flex-basis: 45%; /* Takes up 55% of the flex container */
+    font-size: 20px;
+    color: #333; /* Dark grey text for readability */
+    margin: 0;
+    text-align: left;
+    padding-left: 1rem; /* Spacing between the title and description */
+}
+
+.main-edu {
+    min-height: 100vh;
+    background-color: #5E7E7E;
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: flex-start; /* Align items to the top */
+    align-items: center;
+}
+
+.title-edu {
+    font-weight: 150;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 3rem;
+    color: black; /* Dark blue color */
+    margin-bottom: 2rem; /* Add some space below the title */
+}
+
+.card-edu {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: stretch;
+    margin: 1rem;
+    gap: 1rem;
+}
+
+    .card-edu > a:nth-child(1) .edu-section {
+        background-color: #d4cfb1 !important; /* Color for the first card */
+    }
+
+    .card-edu > a:nth-child(2) .edu-section {
+        background-color: cadetblue !important; /* Color for the second card */
+    }
+
+    .card-edu > a:nth-child(3) .edu-section {
+        background-color: #4E567E !important; /* Color for the third card */
+    }
+
+.post-card-link {
+    text-decoration: none;
+    color: inherit;
+    padding: 2px /* Make the entire area clickable */
+}
+
+.edu-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align all items to the left */
+    padding: 2rem;
+    background-color: #d4cfb1;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    min-width: calc(33.333% - 1rem);
+    transition: transform 0.3s ease;
+}
+
+    .edu-section:hover {
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+        transform: scale(1.1);
+    }
+
+    .edu-section img {
+        align-self: center; /* Center the image */
+    }
+
+.mainskills {
+    min-height: 100vh;
+    padding: 2rem;
+    background-color: #d4cfb1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mainwork {
+    min-height: 100vh;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #8FA3BF;
+}
+
+.centered-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin-bottom: 0 !important;
+    background-color: #4E567E
+}
+
+img.social-icon {
+    width: 30px;
+    height: 30px;
+}
+
+.social-icon {
+    transition: transform 0.3s ease;
+}
+
+    .social-icon:hover {
+        transform: scale(2.4);
+    }
+
+.bodysocial {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
