@@ -10,13 +10,14 @@ import Project from "./components/Project";
 export default function App() {
     return (
         <div>
-            <About />
+            testing
+            {/* <About />
             <Skill />
             <Education />
             <Experience />
             <Project />
             <Blog />
-            <Navbar />
+            <Navbar /> */}
         </div>
 
     )
