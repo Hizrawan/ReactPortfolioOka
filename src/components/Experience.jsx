@@ -3,10 +3,10 @@ import React from 'react'
 const Experience = () => {
     return (
         <div className="mainwork">
-            <div className="work-section">
-
+            <div>
+            <h2 className="title-edu">Work Experiences</h2>
                 <div className="testwork">
-                    <div className="work-section">
+                    <div className="work-section section1">
                         <h2>PT. Lapi Divusi</h2>
                         <br />
                         <strong>Programmer Internship</strong>
@@ -20,7 +20,7 @@ const Experience = () => {
                             </li>
                         </ul>
                     </div>
-                    <div className="work-section">
+                    <div className="work-section section2">
                         <h2>Fujitsu Indonesia</h2>
                         <br />
                         <strong>Functional Developer / Fulstack Engineer</strong>
@@ -33,11 +33,11 @@ const Experience = () => {
                                 Create function and stored procedure in PostgreSQL
                             </li>
                             <li>
-                                Create front-end and back-end function using .Net Core and Telerik’s KendoUI framework
+                                Create front-end and back-end function using .Net Core and Telerikï¿½s KendoUI framework
                             </li>
                         </ul>
                     </div>
-                    <div className="work-section">
+                    <div className="work-section section3">
                         <h2>Multimedia Security Lab - NCUT</h2>
                         <br />
                         <strong>Research Assistant</strong>
@@ -54,7 +54,7 @@ const Experience = () => {
                             </li>
                         </ul>
                     </div>
-                    <div className="work-section">
+                    <div className="work-section section4">
                         <h2> Xiangshun Information Co., Ltd</h2>
                         <br />
                         <strong>Software Engineer</strong>

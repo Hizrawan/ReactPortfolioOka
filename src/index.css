@@ -9,7 +9,6 @@ h1 {
 
 .App {
     min-height: 100vh;
-    min-width: 100vw;
     background-color: #4E567E;
     display: flex;
     justify-content: center;
@@ -77,6 +76,7 @@ h1 {
     font-size: 3rem;
     color: black; /* Dark blue color */
     margin-bottom: 2rem; /* Add some space below the title */
+    text-align: center;
 }
 
 .card-edu {
@@ -171,3 +171,147 @@ img.social-icon {
     justify-content: center;
     gap: 1.5rem;
 }
+
+.mainproject {
+    min-height: 100vh;
+    padding: 2rem;
+    background-color: #5E7E7E;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mainblog {
+    min-height: 100vh;
+    padding: 2rem;
+    background-color: #d4cfb1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-project {
+    flex: 1;
+    min-width: calc(33.333% - 1rem); /* Adjust the width as needed */
+    border: 1px solid #ccc;
+    padding: 1rem;
+    width: 30vw;
+    height: 20vh;
+    margin: 5px;
+    text-align: center;
+    background-color: #D9D9D6;
+    border-radius: 10px; /* Rounded edges */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* Shadow effect */
+    transition: 0.3s ease;
+    display: flex; /* Added to make the content of the card a flex container */
+    flex-direction: column; /* Aligns children of the card vertically */
+}
+
+.card-project:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    transform: scale(1.1);
+}
+
+.project-section {
+    display: grid;
+    align-items: center;
+    background-color: #d4cfb1;
+    padding: 1rem;
+    margin-left: 15px;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    grid-template-columns: repeat(2, 1fr);
+}
+
+    .project-section h4 {
+        font-size: 1rem
+    }
+
+    .blog-section {
+        display: grid;
+        align-items: center;
+        padding: 1rem;
+        background-color: #4E567E;
+        border-radius: 8px; /* Rounded corners */
+        box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+        grid-template-columns: repeat(3, 1fr);
+        margin-right: 15px;
+    }
+
+    .card-blog {
+        flex: 1;
+        min-width: calc(33.333% - 1rem); /* Adjust the width as needed */
+        border: 1px solid #ccc;
+        padding: 1rem;
+        width: 30vw;
+        height: 20vh;
+        margin: 5px;
+        text-align: center;
+        background-color: #D9D9D6;
+        border-radius: 10px; /* Rounded edges */
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* Shadow effect */
+        transition: 0.3s ease;
+        display: flex; /* Added to make the content of the card a flex container */
+        flex-direction: column; /* Aligns children of the card vertically */
+    }
+    .card-blog:hover {
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+        transform: scale(1.1);
+    }
+
+    .testwork {
+        flex-direction: row;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1rem;
+        align-items: stretch;
+    }
+    .section1 {
+        background-color: cadetblue; /* Light red */
+    }
+    
+    .section2 {
+        background-color: #d4cfb1; /* Light blue */
+    }
+    
+    .section3 {
+        background-color: #4E567E; /* Light green */
+    }
+    
+    .section4 {
+        background-color: #7E4E4E; /* Light yellow */
+    }
+
+    .work-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem;
+        border-radius: 8px; /* Rounded corners */
+        box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+        max-height: 70vh;
+        transition: transform 0.3s ease;
+    }
+    
+        .work-section h2 {
+            margin-bottom: 1px; /* Spacing below the heading */
+        }
+    
+        .work-section ul {
+            list-style-type: none; /* Remove default list styling */
+            padding: 0; /* Remove default padding */
+        }
+    
+        .work-section li {
+            background-color: #e9e7e2; /* Light grey background for each skill */
+            padding: 0.5rem 1rem; /* Padding inside each skill */
+            margin-bottom: 0.5rem; /* Spacing between skills */
+            font-size: 11px;
+            border-radius: 8px;
+        }
+    
+        .work-section:hover {
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+            transform: scale(1.1);
+        }
+
