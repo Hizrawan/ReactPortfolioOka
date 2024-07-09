@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://hizrawan.github.io/ReactPortfolioOka",
+  "homepage": "https://hizrawan.github.io/ReactPortfolioOka/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
