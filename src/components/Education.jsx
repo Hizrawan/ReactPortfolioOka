@@ -38,10 +38,10 @@ const Education = () => {
                 </a>
             </div>
             <div className="scroll-button">
-        <Link to="experience" spy={true} smooth={true} offset={-15} duration={500}>
-        <img src={Scroll} alt="Scroll to Next Section" />
-        </Link>
-      </div>
+                <Link to="experience" spy={true} smooth={true} offset={-15} duration={500}>
+                    <img src={Scroll} alt="Scroll to Next Section" />
+                </Link>
+            </div>
         </div>
 
     )

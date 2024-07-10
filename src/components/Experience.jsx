@@ -6,7 +6,7 @@ const Experience = () => {
     return (
         <div className="mainwork">
             <div>
-            <h2 className="title-edu">Work Experiences</h2>
+                <h2 className="title-edu">Work Experiences</h2>
                 <div className="testwork">
                     <div className="work-section section1">
                         <h2>PT. Lapi Divusi</h2>
@@ -73,10 +73,10 @@ const Experience = () => {
                 </div>
             </div>
             <div className="scroll-button">
-        <Link to="project" spy={true} smooth={true} offset={-15} duration={500}>
-        <img src={Scroll} alt="Scroll to Next Section" />
-        </Link>
-      </div>
+                <Link to="project" spy={true} smooth={true} offset={-15} duration={500}>
+                    <img src={Scroll} alt="Scroll to Next Section" />
+                </Link>
+            </div>
         </div>
 
     )
