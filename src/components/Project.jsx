@@ -22,11 +22,11 @@ const Project = () => {
                             <p className='linkproject'>https://github.com/Hizrawan/PortfolioOkaBlazor</p>
                         </div>
                     </a>
-                    <a href="https://github.com/Hizrawan/PortfolioOkaBlazor" target="_blank" className="post-card-link">
+                    <a href="https://github.com/Hizrawan/PersonalGameProject" target="_blank" className="post-card-link">
                         <div className="card-project">
-                            <h4>Portfolio Website</h4>
-                            <p>A website for showcasing my skills, achievements. Build Using .Net Core 8, and Blazor.</p>
-                            <p className='linkproject'>https://github.com/Hizrawan/PortfolioOkaBlazor</p>
+                            <h4>Majapahit</h4>
+                            <p>An action RPG Game made using Godot Engine.</p>
+                            <p className='linkproject'>https://github.com/Hizrawan/PersonalGameProject</p>
                         </div>
                     </a>
                     <a href="https://github.com/Hizrawan" className="post-card-link">
