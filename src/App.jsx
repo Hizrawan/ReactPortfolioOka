@@ -7,8 +7,8 @@ import Experience from "./components/Experience";
 import Blog from "./components/Blog";
 import Skill from "./components/Skill";
 import Project from "./components/Project";
-import ScrollButton from "./components/ScrollButton";
 import { Element } from 'react-scroll';
+import Certification from './components/Certification';
 
 export default function App() {
     return (
@@ -19,6 +19,9 @@ export default function App() {
             </Element>
             <Element name="skill">
                 <Skill />
+            </Element>
+            <Element name="certification">
+                <Certification />
             </Element>
             <Element name="education">
                 <Education />

@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-scroll';
+import Scroll from "../assets/images/down-arrow.svg"
+
 const Blog = () => {
     const [posts, setPosts] = useState([]);
 
@@ -15,7 +17,8 @@ const Blog = () => {
 
   return (
     <div className="mainblog">
-     <div className="blog-section">
+      <div className='blog-container'>
+      <div className="blog-section">
         {posts.map((post, index) => (
           <a key={index} href={post.url} target="_blank" className="post-card-link" rel="noopener noreferrer">
             <div className="card-blog">
@@ -35,9 +38,11 @@ const Blog = () => {
 </div>
 
      <h1 className='title-edu'>Blogs</h1>
+      </div>
+    
      <div className="scroll-button">
         <Link to="contact" spy={true} smooth={true} offset={-15} duration={500}>
-          <button>Scroll to Next Section</button>
+        <img src={Scroll} alt="Scroll to Next Section" />
         </Link>
       </div>
  </div>

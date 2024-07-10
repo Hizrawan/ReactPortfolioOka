@@ -1,8 +1,10 @@
 import React from 'react'
+import { Link } from 'react-scroll';
 import Binus from "../assets/images/logobinus.png"
 import Polban from "../assets/images/logopolban.png"
 import NCUT from "../assets/images/logoncut.png"
-import { Link } from 'react-scroll';
+import Scroll from "../assets/images/down-arrow.svg"
+
 const Education = () => {
     return (
 
@@ -37,7 +39,7 @@ const Education = () => {
             </div>
             <div className="scroll-button">
         <Link to="experience" spy={true} smooth={true} offset={-15} duration={500}>
-          <button>Scroll to Next Section</button>
+        <img src={Scroll} alt="Scroll to Next Section" />
         </Link>
       </div>
         </div>

@@ -1,5 +1,7 @@
 import React from 'react'
 import { Link } from 'react-scroll';
+import Scroll from "../assets/images/down-arrow.svg"
+
 const Experience = () => {
     return (
         <div className="mainwork">
@@ -64,7 +66,7 @@ const Experience = () => {
                                 Using .Net core, Blazor, and MSSQL
                             </li>
                             <li>
-                                Translate documents from chinese to english
+                                Learn more about chinese language
                             </li>
                         </ul>
                     </div>
@@ -72,7 +74,7 @@ const Experience = () => {
             </div>
             <div className="scroll-button">
         <Link to="project" spy={true} smooth={true} offset={-15} duration={500}>
-          <button>Scroll to Next Section</button>
+        <img src={Scroll} alt="Scroll to Next Section" />
         </Link>
       </div>
         </div>

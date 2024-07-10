@@ -1,5 +1,7 @@
 import React from 'react'
 import { Link } from 'react-scroll';
+import Scroll from "../assets/images/down-arrow.svg"
+
 const Skill = () => {
     return (
         <div className="mainskills">
@@ -15,8 +17,8 @@ const Skill = () => {
                 </ul>
             </div>
             <div className="scroll-button">
-        <Link to="education" spy={true} smooth={true} offset={-15} duration={500}>
-          <button>Scroll to Next Section</button>
+        <Link to="certification" spy={true} smooth={true} offset={-15} duration={500}>
+        <img src={Scroll} alt="Scroll to Next Section" />
         </Link>
       </div>
         </div>

@@ -1,12 +1,12 @@
-/* App.css */
+body {
+    margin: 0;
+  }
 h1 {
-    font-weight: 200;
+    font-weight: 100;
     font-family: "Cormorant Garamond", serif;
     font-size: 7rem;
     margin: 0;
 }
-
-
 .App {
     min-height: 100vh;
     background-color: #4E567E;
@@ -14,6 +14,7 @@ h1 {
     justify-content: center;
     margin-top: -2rem !important;
     align-items: center;
+    flex-direction: column;
 }
 /* Card.css */
 .card {
@@ -26,6 +27,7 @@ h1 {
     transition: transform 0.3s ease;
     position: relative; /* Needed for tooltip positioning */
     cursor: pointer; /* Indicate clickable element */
+    margin-bottom:25px ;
   }
   
   .card:hover {
@@ -87,6 +89,14 @@ h1 {
     justify-content: center; /* Align items to the top */
     align-items: center;
 }
+.main-cert {
+    min-height: 100vh;
+    background-color: #8FA3BF;
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: center; /* Align items to the top */
+    align-items: center;
+}
 
 .title-edu {
     font-weight: 150;
@@ -96,6 +106,7 @@ h1 {
     margin-bottom: 2rem; /* Add some space below the title */
     text-align: center;
 }
+
 
 .card-edu {
     display: grid;
@@ -118,6 +129,40 @@ h1 {
         background-color: #4E567E !important; /* Color for the third card */
     }
 
+    
+.title-cert {
+    font-weight: 150;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 2rem;
+    color: black; /* Dark blue color */
+    margin-bottom: 2rem; /* Add some space below the title */
+    text-align: center;
+}
+
+.card-cert {
+    align-items: stretch;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    background-color: #f7f7f7; /* Lighter background for contrast */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.card-cert > a:nth-child(1) .cert-section {
+    background-color: #a0c4c4 !important; /* Lighter color for the second card */
+}
+
+.card-cert > a:nth-child(2) .cert-section {
+    background-color: #7a819e !important; /* Lighter color for the third card */
+}
+
+.card-cert > a:nth-child(3) .cert-section {
+    background-color: #eae7d6 !important; /* Lighter color for the first card */
+}
+.card-cert > a:nth-child(4) .cert-section {
+    background-color: rgb(245, 218, 222) !important; /* Lighter color for the first card */
+}
 .post-card-link {
     text-decoration: none;
     color: inherit;
@@ -133,7 +178,7 @@ h1 {
     border-radius: 8px; /* Rounded corners */
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Subtle shadow */
     min-width: calc(33.333% - 1rem);
-    min-height: 35vh;
+    min-height: 45vh;
     transition: transform 0.3s ease;
 }
 
@@ -143,6 +188,42 @@ h1 {
     }
 
     .edu-section img {
+        width: 100px;
+        height: 100px;
+        align-self: center; /* Center the image */
+    }
+    
+.cert-section {
+    background-color: #e9e7e2; /* Light grey background for each skill */
+    padding: 0.5rem 1rem; /* Padding inside each skill */
+    margin-bottom: 0.2em; /* Spacing between skills */
+    border-radius: 8px; /* Rounded corners for skill items */
+    transition: transform 0.3s ease;
+}
+
+.cert-section:hover {
+    transform: translateY(-5px);
+}
+
+.cert-section strong {
+    
+    font-size: 1.2em;
+    font-weight: bold;
+    color: black;
+}
+
+.cert-section p {
+   
+    font-size: 1em;
+    color: rgb(60, 60, 60);
+}
+
+    .cert-section:hover {
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+        transform: scale(1.1);
+    }
+
+    .cert-section img {
         align-self: center; /* Center the image */
     }
 
@@ -153,6 +234,7 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 .skills-section {
     padding: 2rem;
@@ -192,6 +274,7 @@ h1 {
     justify-content: center;
     align-items: center;
     background-color: #8FA3BF;
+    flex-direction: column;
 }
 
 .centered-container {
@@ -229,13 +312,22 @@ img.social-icon {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 .mainproject h1{
    font-weight: 100;
    font-size: 4rem;
    margin-right: 15px;
 }
-
+.project-container{
+    
+    background-color: #5E7E7E;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+   
+}
 .mainblog {
     min-height: 100vh;
     padding: 2rem;
@@ -243,20 +335,28 @@ img.social-icon {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 .mainblog h1{
     font-weight: 100;
     font-size: 4rem;
     margin-right: 15px;
  }
-
+.blog-container{
+    background-color: #d4cfb1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    
+}
 .card-project {
     flex: 1;
     min-width: calc(33.333% - 1rem); /* Adjust the width as needed */
     border: 1px solid #ccc;
     padding: 1rem;
-    width: 30vw;
-    height: 30vh;
+    width: 25vw;
+    height: 29vh;
     margin: 5px;
     text-align: center;
     background-color: #D9D9D6;
@@ -271,6 +371,7 @@ img.social-icon {
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
     transform: scale(1.1);
 }
+
 
 .project-section {
     display: grid;
@@ -390,6 +491,7 @@ nav {
     justify-content: space-around;
     margin: 0;
     padding: 0;
+    
   }
   
   .navbar-menu li {
@@ -406,6 +508,15 @@ nav {
   .navbar-menu a:hover {
     color: #ff6347; /* Tomato color */
   }
+  .navbar-toggle {
+    display: none;
+    background-color: #333;
+    color: white;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
   
   .active {
     border-bottom: 2px solid #ff6347;
@@ -434,3 +545,401 @@ nav {
   .scroll-button button:hover {
     background-color: #0056b3;
   }
+  .linkproject{
+    white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis;
+}
+  /* Styles for mobile devices */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+    .project-container{
+    
+        background-color: #5E7E7E;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+       
+    }
+    .blog-section {
+        display: grid;
+        align-items: center;
+        padding: 1rem;
+        background-color: #4E567E;
+        border-radius: 8px; /* Rounded corners */
+        box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+        grid-template-columns: repeat(2, 1fr);
+        margin-right: 20px;
+    }
+    .blog-container{
+        background-color: #d4cfb1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        
+    }
+.project-section {
+    display: grid;
+    align-items: center;
+    background-color: #d4cfb1;
+    padding: 1rem;
+    margin-left: 15px;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    grid-template-columns: repeat(1, 1fr);
+}
+
+    .project-section h4 {
+        font-size: 1rem
+    }
+    
+.card-project {
+    flex: 1;
+    min-width: calc(33.333% - 1rem); /* Adjust the width as needed */
+    border: 1px solid #ccc;
+    padding: 1rem;
+    width: 60vw;
+    height: 35vh;
+    margin: 5px;
+    text-align: center;
+    background-color: #D9D9D6;
+    border-radius: 10px; /* Rounded edges */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* Shadow effect */
+    transition: 0.3s ease;
+    display: flex; /* Added to make the content of the card a flex container */
+    flex-direction: column; /* Aligns children of the card vertically */
+}
+.card-blog:hover {
+    box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0);
+    transform: scale(1);
+}
+
+.card-blog p {
+    display: none;
+}
+.card-project:hover {
+    box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0);
+    transform: scale(1);
+}
+    .mainproject h1 {
+        font-weight: 100;
+        font-family: "Cormorant Garamond", serif;
+        font-size: 3rem;
+        margin: 0;
+    }
+    .navbar-menu {
+        display: none;
+        flex-direction: column;
+      }
+    
+      .navbar-toggle {
+        display: block;
+      }
+    
+      .navbar-menu.active {
+        display: flex;
+      }
+      .name {
+        flex-basis: 50% !important; /* Takes up 40% of the flex container */
+        font-size: 2rem !important;
+        color: #4E567E !important; /* Dark blue color */
+        margin: 0 !important;
+        font-weight: 100;
+    }
+    
+    .description {
+        text-align: center;
+        flex-basis: 45%; /* Takes up 55% of the flex container */
+        font-size: 1rem;
+        color: #333; /* Dark grey text for readability */
+        margin: 0;
+        text-align: left;
+        padding-left: 1rem; /* Spacing between the title and description */
+    }
+    
+    .card-cert {
+        align-items: stretch;
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+        background-color: #8FA3BF; /* Lighter background for contrast */
+        border-radius: 8px; /* Rounded corners */
+        box-shadow: 0 0px 0px rgba(0, 0, 0, 0); /* Subtle shadow */
+    }
+
+.cert-section strong {
+    
+    font-size: 1em;
+    font-weight: bold;
+    color: black;
+}
+
+.cert-section p {
+   
+    font-size: 0.8em;
+    color: rgb(60, 60, 60);
+}
+.card-edu {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    margin: 1rem;
+    gap: 1rem;
+    
+}
+.testwork {
+    flex-direction: column;
+    display: flex;
+   
+    gap: 1rem;
+    align-items: stretch;
+}
+
+.card:hover {
+    transform: scale(1);
+  }
+  .card:hover .tooltip {
+    opacity: 1;
+  }
+    .edu-section:hover {
+        box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.0);
+        transform: scale(1);
+    }
+.cert-section:hover {
+    transform: translateY(0px);
+}
+    .cert-section:hover {
+        box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0);
+        transform: scale(1);
+    }
+    .work-section:hover {
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0);
+        transform: scale(1);
+    }
+    .skills-section:hover {
+        box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0);
+        transform: scale(1);
+    }
+    .skills-section li:hover {
+        box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0);
+        transform: scale(1);
+    }
+
+
+    
+}
+@media only screen and (min-width: 540px) and (max-width: 740px) {
+    .project-container{
+    
+        background-color: #5E7E7E;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+       
+    }
+    .blog-section {
+        display: grid;
+        align-items: center;
+        padding: 1rem;
+        background-color: #4E567E;
+        border-radius: 8px; /* Rounded corners */
+        box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+        grid-template-columns: repeat(2, 1fr);
+        margin-right: 20px;
+    }
+    .blog-container{
+        background-color: #d4cfb1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        
+    }
+.project-section {
+    display: grid;
+    align-items: center;
+    background-color: #d4cfb1;
+    padding: 1rem;
+    margin-left: 15px;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    grid-template-columns: repeat(1, 1fr);
+}
+
+    .project-section h4 {
+        font-size: 1rem
+    }
+    
+.card-project {
+    flex: 1;
+    min-width: calc(33.333% - 1rem); /* Adjust the width as needed */
+    border: 1px solid #ccc;
+    padding: 1rem;
+    width: 60vw;
+    height: 35vh;
+    margin: 5px;
+    text-align: center;
+    background-color: #D9D9D6;
+    border-radius: 10px; /* Rounded edges */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* Shadow effect */
+    transition: 0.3s ease;
+    display: flex; /* Added to make the content of the card a flex container */
+    flex-direction: column; /* Aligns children of the card vertically */
+}
+.card-blog:hover {
+    box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0);
+    transform: scale(1);
+}
+
+.card-blog p {
+    display: none;
+}
+.card-project:hover {
+    box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0);
+    transform: scale(1);
+}
+    .mainproject h1 {
+        font-weight: 100;
+        font-family: "Cormorant Garamond", serif;
+        font-size: 3rem;
+        margin: 0;
+    }
+    .navbar-menu {
+        display: none;
+        flex-direction: column;
+      }
+    
+      .navbar-toggle {
+        display: block;
+      }
+    
+      .navbar-menu.active {
+        display: flex;
+      }
+      .name {
+        flex-basis: 50% !important; /* Takes up 40% of the flex container */
+        font-size: 2rem !important;
+        color: #4E567E !important; /* Dark blue color */
+        margin: 0 !important;
+        font-weight: 100;
+    }
+    
+    .description {
+        text-align: center;
+        flex-basis: 45%; /* Takes up 55% of the flex container */
+        font-size: 1rem;
+        color: #333; /* Dark grey text for readability */
+        margin: 0;
+        text-align: left;
+        padding-left: 1rem; /* Spacing between the title and description */
+    }
+    
+    .card-cert {
+        align-items: stretch;
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+        background-color: #8FA3BF; /* Lighter background for contrast */
+        border-radius: 8px; /* Rounded corners */
+        box-shadow: 0 0px 0px rgba(0, 0, 0, 0); /* Subtle shadow */
+    }
+
+.cert-section strong {
+    
+    font-size: 1em;
+    font-weight: bold;
+    color: black;
+}
+
+.cert-section p {
+   
+    font-size: 0.8em;
+    color: rgb(60, 60, 60);
+}
+.card-edu {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    margin: 1rem;
+    gap: 1rem;
+    
+}
+.testwork {
+    flex-direction: column;
+    display: flex;
+   
+    gap: 1rem;
+    align-items: stretch;
+}
+
+.card:hover {
+    transform: scale(1);
+  }
+  .card:hover .tooltip {
+    opacity: 1;
+  }
+    .edu-section:hover {
+        box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.0);
+        transform: scale(1);
+    }
+.cert-section:hover {
+    transform: translateY(0px);
+}
+    .cert-section:hover {
+        box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0);
+        transform: scale(1);
+    }
+    .work-section:hover {
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0);
+        transform: scale(1);
+    }
+    .skills-section:hover {
+        box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0);
+        transform: scale(1);
+    }
+    .skills-section li:hover {
+        box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0);
+        transform: scale(1);
+    }
+
+
+    
+}
+  /* Styles for tablets */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    .blog-container{
+        background-color: #d4cfb1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        
+    }
+    
+}
+/* Styles for small screens and laptops */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    .blog-container{
+        background-color: #d4cfb1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        
+    }
+    
+}
+@media only screen and (min-width: 1025px) and (max-width: 1200px) {
+    /* Styles for desktops and large screens */
+}
+@media only screen and (min-width: 1201px) {
+    /* Styles for extra large screens and TVs */
+}

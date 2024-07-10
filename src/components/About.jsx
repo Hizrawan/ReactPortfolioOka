@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-scroll';
+import Scroll from "../assets/images/down-arrow.svg"
+import cv2024 from '../assets/CV2024.pdf';
 
 function About() {
         const [tooltipPosition, setTooltipPosition] = useState({ x: 0, y: 0 });
@@ -19,8 +21,8 @@ function About() {
       
         const handleClick = () => {
           const link = document.createElement('a');
-          link.href = 'path/to/your/resume.pdf'; // Replace with the actual path to your PDF file
-          link.download = 'resume.pdf';
+          link.href = cv2024; 
+          link.download = 'Resume_Hizrawan_2024.pdf';
           document.body.appendChild(link);
           link.click();
           document.body.removeChild(link);
@@ -46,7 +48,7 @@ function About() {
             </div>
             <div className="scroll-button">
         <Link to="skill" spy={true} smooth={true} offset={-15} duration={500}>
-          <button>Scroll to Next Section</button>
+        <img src={Scroll} alt="Scroll to Next Section" />
         </Link>
       </div>
         </div>

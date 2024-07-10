@@ -1,10 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-scroll';
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <nav>
-      <ul className="navbar-menu">
+      <button className="navbar-toggle" onClick={toggleMenu}>
+        ☰
+      </button>
+      <ul className={`navbar-menu ${isOpen ? 'active' : ''}`}>
         <li>
           <Link
             activeClass="active"
@@ -27,6 +36,18 @@ const Navbar = () => {
             duration={500}
           >
             Skill
+          </Link>
+        </li>
+        <li>
+          <Link
+            activeClass="active"
+            to="certification"
+            spy={true}
+            smooth={true}
+            offset={-10}
+            duration={500}
+          >
+            Certification
           </Link>
         </li>
         <li>
